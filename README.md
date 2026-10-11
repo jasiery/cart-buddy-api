@@ -30,29 +30,41 @@ An app where you can set a budget, build your visual cart while shoopping, and i
       
 3. Set a budget
    Example:
+   ```
      name: 1 Week grocery budget
      amount: 3,000
-4. Add items in the cart
+   ```
+5. Add items in the cart
    Manual Input
+   ```
      product name: 1 dozen Eggs
      unit price: P 123
      quantity: 2
      category: (automatically identified, or user can set on their own)
      source: SCANNED or MANUAL
+     ```
    Scan Product Tag
+   ```
      image: photo of product tag
- 5. Live cart calculation
+   ```
+ 7. Live cart calculation
+    ```
       unit price of product: unit price of product
       quantity x price: unit price of each product multiplied in the quantity entered
       estimatated total:
       remaining budget: budget subtracted to estimated total
-6. Budget indicator
+    ```
+9. Budget indicator
+    ```
      status: safe, getting close or over budget
-7. Shopping summary
+    ```
+11. Shopping summary
+    ```
      total spent:
      number of products:
      most expensive product:
      spending category:
+    ```
 
 Sample UX
 
