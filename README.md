@@ -10,18 +10,23 @@ An app where you can set a budget, build your visual cart while shoopping, and i
 
 **Features**
 1. Create budget group and add a specific budget
+
    Example:
-      October Budget
-      |
-      ├── 1 Week grocery budget
-      │   └── ₱3,000
-      ├── 1 Week grocery budget
-      │   └── ₱3,000
-      Local Travel Budget
-      ├── Transportation budget
-      │   └── ₱15,000
-      └── Food budget
-          └── ₱1,890
+
+   ```
+   October Budget
+   |
+   ├── 1 Week grocery budget
+   │   └── ₱3,000
+   ├── 1 Week grocery budget
+   │   └── ₱3,000
+
+   Local Travel Budget
+   ├── Transportation budget
+   │   └── ₱15,000
+   └── Food budget
+       └── ₱1,890
+   ```
       
 3. Set a budget
    Example:
@@ -56,22 +61,29 @@ Sample UX
 **MODELS**
 
 User
+```
 - id
 - username
 - password
+```
 
 UserDetail
+```
 - userId
 - firstName
 - lastName
 - email
 - phone
+```
 
 UserBudget
+```
 - userId
 - budgetList
+```
   
 Budget
+```
 - id
 - userId
 - shoppingSessionId
@@ -81,23 +93,29 @@ Budget
 - status
 - createdAt
 - updatedAt
+```
 
 ShoppingSession
+```
 - id
 - budgetId
 - status
 - createdAt
 - updatedAt
+```
 
 ShopppingItem
+```
 - id
 - productId
 - quantity
 - source
 - createdAt
 - updatedAt
+```
 
 Product
+```
 - id
 - name
 - brand
@@ -105,8 +123,10 @@ Product
 - imageUrl
 - createdAt
 - updatedAt
+```
 
 OcrScan
+```
 - id
 - imageId
 - status
@@ -117,6 +137,6 @@ OcrScan
 - confidence
 - createdAt
 - completedAt
-
+```
 
 
