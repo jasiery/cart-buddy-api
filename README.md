@@ -9,11 +9,25 @@ People often shop without knowing how much they've spent until they reach the ch
 An app where you can set a budget, build your visual cart while shoopping, and instantly see live of how much you've spent and how much money remains.
 
 **Features**
-1. Set a budget
+1. Create budget group and add a specific budget
+   Example:
+      October Budget
+      |
+      ├── 1 Week grocery budget
+      │   └── ₱3,000
+      ├── 1 Week grocery budget
+      │   └── ₱3,000
+      Local Travel Budget
+      ├── Transportation budget
+      │   └── ₱15,000
+      └── Food budget
+          └── ₱1,890
+      
+3. Set a budget
    Example:
      name: 1 Week grocery budget
      amount: 3,000
-2. Add items in the cart
+4. Add items in the cart
    Manual Input
      product name: 1 dozen Eggs
      unit price: P 123
@@ -22,14 +36,14 @@ An app where you can set a budget, build your visual cart while shoopping, and i
      source: SCANNED or MANUAL
    Scan Product Tag
      image: photo of product tag
- 3. Live cart calculation
+ 5. Live cart calculation
       unit price of product: unit price of product
       quantity x price: unit price of each product multiplied in the quantity entered
       estimatated total:
       remaining budget: budget subtracted to estimated total
-4. Budget indicator
+6. Budget indicator
      status: safe, getting close or over budget
-5. Shopping summary
+7. Shopping summary
      total spent:
      number of products:
      most expensive product:
@@ -41,8 +55,25 @@ Sample UX
 
 **MODELS**
 
+User
+- id
+- username
+- password
+
+UserDetail
+- userId
+- firstName
+- lastName
+- email
+- phone
+
+UserBudget
+- userId
+- budgetList
+  
 Budget
 - id
+- userId
 - shoppingSessionId
 - name
 - amount
@@ -89,8 +120,3 @@ OcrScan
 
 
 
-
-    
-    
-    
-     
