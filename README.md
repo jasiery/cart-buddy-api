@@ -107,7 +107,7 @@ Budget
 - updatedAt
 ```
 
-ShoppingSession
+Cart
 ```
 - id
 - budgetId
@@ -116,7 +116,7 @@ ShoppingSession
 - updatedAt
 ```
 
-ShopppingItem
+CartProduct
 ```
 - id
 - productId
