@@ -1,0 +1,34 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /cartbuddy-service
+
+cartbuddy:
+  openapi:
+    title: Cart Buddy API
+    description: REST API for the Cart Buddy service
+    version: 1.0.0
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /index.html
+
+  packages-to-scan:
+    - com.cartbuddy.api
+jwt:
+  secret: i5yFY4DMGktLTFSlAADiqKwAcKv2dULJP+gFRcTLKFs=
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cartbuddy_db
+    username: postgres
+    password: password2026
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:create-schema.sql
+      data-locations: classpath:insert-default-schema.sql
+  jpa:
+    hibernate:
+      ddl-auto: none
