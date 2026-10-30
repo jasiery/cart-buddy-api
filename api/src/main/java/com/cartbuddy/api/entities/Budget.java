@@ -36,11 +36,12 @@ public class Budget extends BaseEntity {
     @Column(nullable = false, length = 20)
     private BudgetStatus status = BudgetStatus.ACTIVE;
 
-    @OneToMany(
+    @OneToOne(
             mappedBy = "budget",
             cascade = CascadeType.ALL,
-            orphanRemoval = true
+            orphanRemoval = true,
+            fetch = FetchType.EAGER
     )
-    private List<Cart> carts = new ArrayList<>();
+    private Cart cart;
 
 }

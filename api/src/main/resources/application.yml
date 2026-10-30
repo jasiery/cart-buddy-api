@@ -13,6 +13,8 @@ springdoc:
     path: /v3/api-docs
   swagger-ui:
     path: /index.html
+    tags-sorter: alpha
+    operations-sorter: alpha
 
   packages-to-scan:
     - com.cartbuddy.api
@@ -32,3 +34,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+app:
+  datetime:
+    format: yyyy-MM-dd HH:mm:ss

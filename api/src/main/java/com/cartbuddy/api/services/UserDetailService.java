@@ -17,8 +17,7 @@ public class UserDetailService{
     }
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        AppUser appUser = userRepository.findByUsername(username)
-                .orElseThrow();
+        AppUser appUser = userRepository.findByUsername(username);
 
         return User.withUsername(appUser.getUsername())
                 .password(appUser.getPasswordHash())

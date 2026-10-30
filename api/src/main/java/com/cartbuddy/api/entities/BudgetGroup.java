@@ -18,6 +18,9 @@ public class BudgetGroup {
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
+    @Column(name = "name", nullable = false)
+    private String name;
+
     @OneToMany(
             mappedBy = "budgetGroup",
             cascade = CascadeType.ALL,

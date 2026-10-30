@@ -14,8 +14,12 @@ public class Cart extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "budget", nullable = false)
+    @OneToOne(
+            mappedBy = "budget",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.EAGER
+    )
     private Budget budget;
 
 }

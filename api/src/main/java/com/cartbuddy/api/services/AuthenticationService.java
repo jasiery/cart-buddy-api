@@ -25,7 +25,7 @@ public class AuthenticationService {
     private PasswordEncoder passwordEncoder;
 
     public AuthResponse login(LoginRequest loginRequest) {
-        AppUser user = userRepository.findByUsername(loginRequest.getUsername()).orElseThrow(() -> new RuntimeException("User not found"));
+        AppUser user = userRepository.findByUsername(loginRequest.getUsername());
         if(!passwordEncoder.matches(loginRequest.getPassword(), user.getPasswordHash())) {
             throw new RuntimeException("Invalid credentials");
         }

@@ -16,7 +16,7 @@ public class JwtService {
     @Value("${jwt.secret}")
     private String secretKey;
 
-    private static final long EXPIRATION = 360000L;
+    private static final long EXPIRATION = 1800000L;
     public String generateToken(String username) {
 
         return Jwts.builder()
